@@ -1,0 +1,30 @@
+<div class="row no-margin">
+    <form>
+        <div class="minutes-container">
+            <div class="control input-field">
+                <input id="timer-input" type="number" ng-model="timerInput" ng-change="initialize()" placeholder="minutes">
+                <label for="timer-input" class="sr-only">Minutes</label>
+                <input type="checkbox" id="timer-sounds" />
+                <label for="timer-sounds">Sound</label>
+            </div>
+        </div>
+    </form>
+
+    <!--Display the Clock-->
+    <div class="timerTime" ng-bind="timerTime"></div>
+
+
+    <!--Play, Pause, and Replay buttons-->
+    <div class="footer">
+        <div class="col-xs-4 no-padding">
+            <a class="btn timer-button center-block" id="play" ng-click="start()"><span class="glyphicon glyphicon-play timer-icon" aria-hidden="true"></span></a>
+        </div>
+        <div class="col-xs-4 no-padding">
+            <a class="btn timer-button center-block active" id="pause" ng-click="pause()"><span class="glyphicon glyphicon-pause timer-icon" aria-hidden="true"></span></a>
+        </div>
+        <div class="col-xs-4 no-padding">
+            <a class="btn timer-button center-block" ng-click="reset()"><span class="glyphicon glyphicon-repeat timer-icon" aria-hidden="true"></span></a>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,44 @@
+<h1 class="todo-header">Todo List</h1>
+
+
+<!--Todo List / List of items-->
+<div class="list-group" ng-init="todo = true">
+    <a class="list-group-item" ng-repeat="item in list" ng-if="todo" ng-show="item.complete === false">
+        {{item.name}}
+        <span class="badge" ng-click="removeItem($index)">X</span>
+    </a>
+    <a class="list-group-item" ng-repeat="item in list" ng-if="complete" ng-show="item.complete === true">
+        {{item.name}}
+    </a>
+    <a class="list-group-item" ng-repeat="item in list" ng-if="all">
+        <s ng-if="item.complete">
+        {{item.name}}
+        </s>
+        <span class="badge" ng-show="!item.complete" ng-click="removeItem($index)">X</span>
+        <span ng-if="!item.complete">{{item.name}}</span>
+        <!--
+        <a href="#todo" ng-click="clearCompleted()">Clear Complete</a> -->
+    </a>
+</div>
+
+<!--Input to add item. (only shows on All and Todo sections) -->
+<div ng-if="!complete">
+    <input type="text" ng-model="list.name" />
+    <button class="button-primary" ng-click="addItem()">Add Item</button>
+</div>
+
+<!--All, Todo, and Complete buttons -->
+<div class="row todo-button-list">
+    <div class="col-xs-4">
+        <a href="#todo" class="btn todo-button btn-block" ng-click="all = true; todo = false; complete = false" ng-class="{active: all}">All</a>
+
+    </div>
+    <div class="col-xs-4">
+        <a href="#todo" class="btn todo-button btn-block" ng-click="todo = true; all = false; complete = false" ng-class="{active: todo}">Todo</a>
+
+    </div>
+    <div class="col-xs-4">
+        <a href="#todo" class="btn todo-button btn-block" ng-click="complete = true; todo = false; all = false" ng-class="{active: complete}">Complete</a>
+
+    </div>
+</div>

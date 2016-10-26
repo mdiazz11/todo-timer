@@ -1,0 +1,113 @@
+body {
+    padding: 0px;
+    background-image: url(16.jpg);
+    background-size: cover;
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+header {
+    background-color: rgba(122, 123, 117, .5);
+    padding: 0px;
+}
+
+header a,
+header a:hover,
+header a:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.todo-div,
+.timer-div {
+    padding: 20px;
+}
+
+.timer-div.active {
+    background-color: rgba(345, 85, 82, .5);
+}
+
+.todo-div.active {
+    background-color: rgba(96, 224, 158, .5)
+}
+
+
+/*Timer*/
+
+.minutes-container {
+    padding: 20px 0;
+}
+
+.timerTime {
+    padding: 50px 0;
+    font-size: 64px;
+    background-color: rgba(255, 255, 255, .5);
+    margin-bottom: 50px;
+}
+
+.timer-button {
+    color: #fff;
+    background-color: #F15780;
+    border-color: #D11F4C;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.timer-button:active,
+.timer-button.active,
+.timer-button:hover {
+    color: #fff;
+    background-color: #D11F4C;
+}
+
+.timer-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+/*Todo*/
+
+.todo-header {
+    color: #fff;
+}
+
+.list-group-item {
+    background: rgba(255, 255, 255, .5);
+}
+
+.todo-button-list {
+    margin: 50px;
+}
+
+.todo-button {
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.todo-button,
+.todo-button:hover,
+.todo-button.active,
+.todo-button:active,
+.todo-button:focus {
+    color: #fff;
+    border-color: transparent;
+}
+
+.todo-button:hover,
+.todo-button.active,
+.todo-button:active {
+    background-color: rgba(96, 224, 158, .5);
+}
